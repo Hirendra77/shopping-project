@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MeShop.</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="nav">
+      <div class="brand">
+          <a href="#">Shop Here</a>
+      </div>
+      <div class="nav-item">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="cart/index.html">My Cart</a>
+      </div>
+    </nav>
+    <!-- main content -->
+    <main class="index-main">
+      <div class="left">
+        <div class="aside-top">
+          <p class="index-heading">Shop Here</p>
+          <div class="index-div-btn">
+            <button  class="login">Login</button> 
+            <button  class="signup">Signup</button>
+          </div>
+        </div>
+        <div class="aside-bottom">
+          <img src="tshirt.png" alt="">
+          
+        </div>
+      </div>
+      <div class="right">
+        <img src="landingPagePic.png" alt="shoping image" class="index-image">
+      </div>
+    </main>
+
+    <script>
+      let login = document.querySelector('.login');
+      let signup = document.querySelector('.signup');
+
+      login.addEventListener('click',(e)=>{
+          e.preventDefault();
+          window.location.href = "login.html";
+      });
+
+      signup.addEventListener('click',(e)=>{
+          e.preventDefault();
+          window.location.href = "signup.html";
+      });
+    </script>
+  </body>
+</html>

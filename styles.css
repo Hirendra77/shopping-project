@@ -1,0 +1,155 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.nav a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+
+/* navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  
+    background-color: black;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav .nav-item a {
+    margin: 0 1rem;
+  }
+  
+p.heading {
+    margin-left: 10% !important;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 25px 0px;
+}
+
+.form {
+    width: 80%;
+    margin: 20px 10%;
+}
+.form input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 20px 10px;
+    border-radius: 8px;
+}
+
+.form .signup-btn{
+    width: 200px;
+    background-color: black;
+    color: white;
+    height:40px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.form .login-btn{
+  width: 200px;
+  background-color: black;
+  color: white;
+  height:40px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+
+/*  main index page*/
+
+.index-main {
+    display: flex;
+    margin: 0px 20px;
+    margin-top: 20px;
+    height: 80%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  /* border: 1px solid; */
+  
+}
+.index-heading {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+
+.aside-top {
+  margin-bottom: 50px;
+}
+.index-div-btn {
+  margin-left: 30px;
+}
+button.login {
+  width: 100px;
+  height: 40px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+button.signup {
+  width: 100px;
+  height: 40px;
+  background: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+button.login:hover {
+  width: 120px;
+  height: 45px;
+  background: white;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+button.signup:hover{
+  width: 120px;
+  height: 45px;
+  background: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+img.index-image {
+  margin-left: 10%;
+  width: 100%;
+  height: 100%;
+}

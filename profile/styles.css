@@ -1,0 +1,79 @@
+/* Write your styles here */
+/* Write styles here */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.nav a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+
+/* navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  
+    background-color: black;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav .nav-item a {
+    margin: 0 1rem;
+  }
+  
+p.heading-profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 30px;
+}
+
+.form {
+    width: 80%;
+    margin: 20px 10%;
+}
+.form input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 20px 10px;
+    border-radius: 8px;
+}
+
+.form .saveinfo-btn,.logout-btn{
+    width: 200px;
+    background-color: black;
+    color: white;
+    height:40px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

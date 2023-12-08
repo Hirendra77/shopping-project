@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- bootstrap link -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class="nav">
+        <div class="brand">
+            <a href="/">Shop Here</a>
+        </div>
+        <div class="nav-item">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <a href="cart/index.html">My Cart</a>
+        </div>
+    </nav>
+    <!-- main content -->
+    
+    <main>
+        <p class="heading">Signup</p>
+        <form action="" class="form">
+            <input type="text" class="fname" placeholder="Enter First Name">
+            <input type="text" class="lname" placeholder="Enter Last Name">
+            <input type="email" class="email" placeholder="Enter Email">
+            <input type="password" class="password" placeholder="Enter Password">
+            <input type="password" class="confirm-password" placeholder="Enter Confirm Password">
+            <button type="submit" class="signup-btn">Signup</button>
+        </form>
+    </main>
+    <script>
+        let fname = document.querySelector('.fname');
+        let lname = document.querySelector('.lname');
+        let email = document.querySelector('.email');
+        let pass = document.querySelector('.password');
+        let conpass = document.querySelector('.confirm-password');
+        let submit = document.querySelector('.signup-btn');
+        let data = [];
+        submit.addEventListener('click',(e)=>{
+            e.preventDefault();
+            let obj = {};
+            let name = fname.value + " " + lname.value;
+            
+            if(pass.value === conpass.value){
+                obj.name = name;
+                obj.email = email.value;
+                obj.password =  pass.value;
+                data.push(obj);
+                localStorage.setItem("Data",JSON.stringify(data));
+                alert("Registration Successfully");
+                window.location.href = "login.html";
+            }
+            else{
+                alert('PassWord and Confirm Password are not same');
+            }
+           
+
+        });
+    </script>
+   </body>
+</html>

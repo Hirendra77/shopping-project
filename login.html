@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- bootstrap link -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class="nav">
+        <div class="brand">
+            <a href="#">Shop Here</a>
+        </div>
+        <div class="nav-item">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <a href="cart/index.html">My Cart</a>
+        </div>
+    </nav>
+    <!-- main content -->
+    
+    <main>
+        <p class="heading">Login</p>
+        <form action="" class="form">
+            <input type="email" class="email" placeholder="Enter Email">
+            <input type="password" class="password" placeholder="Enter Password">
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </main>
+    <script>
+        let email = document.querySelector('.email');
+        let pass = document.querySelector('.password');
+        let login = document.querySelector('.login-btn');
+
+        let showData = JSON.parse(localStorage.getItem("Data"))
+        console.log(showData);
+        let arr = [];
+        login.addEventListener('click',(e)=>{
+            e.preventDefault();
+            let newObj = {};
+            for(let data of showData){
+                if(email.value === data.email){
+                    if(pass.value === data.password){
+                        alert("Login Successfull");
+                        newObj.email = email.value;
+                        newObj.password = pass.value;
+
+                        arr.push(newObj);
+                        sessionStorage.setItem("Data",JSON.stringify(arr));
+                        window.location.href = "shop/index.html"; 
+                        // window.location.href = "profile/index.html"; 
+                    }
+                    else{
+                        alert("Password is incorrect... \n Please check Password..");
+                    }
+                    
+                }
+                else{
+                    alert("Email id is incorrect... \n please check Email");
+                }
+            }
+        })
+    </script>
+   </body>
+</html>
